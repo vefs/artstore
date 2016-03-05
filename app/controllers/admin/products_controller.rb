@@ -21,6 +21,22 @@ class Admin::ProductsController < ApplicationController
     end
   end
 
+  def edit
+    @product = Product.find(params[:id])
+  end
+
+  def update
+    @group = Product.find(params[:id])
+
+    if @group.update(product_params)
+      redirect_to admin_products_path #, notice: "修改討論版成功"
+    else
+      render :edit
+    end
+  end
+  def show
+    @product = Product.find(params[:id])
+  end
   private
 
   def product_params

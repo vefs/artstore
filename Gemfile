@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'devise'
 gem "bootstrap-sass"
+gem "simple_form"
 
 gem 'rails', '4.2.2'
 # Use SCSS for stylesheets
