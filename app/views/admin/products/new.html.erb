@@ -2,12 +2,24 @@
   <h2> 新增產品 </h2>
 
   <%= simple_form_for [:admin, @product] do |f| %>
-    <div class="form-group">
+    <div class="group">
       <%= f.input :title %>
       <%= f.input :description, label: '敘述'%>
       <%= f.input :quantity, label: '數量' %>
       <%= f.input :price %>
+
+      <% if @photo.image.present? %>
+        <span> 目前商品圖 </span> <br>
+        <%= image_tag(@photo.image.thumb.url) %>
+      <% end %>
+      <div class="form-group">
+        <%= f.simple_fields_for :photo do |c| %>
+        <%= c.input :image ,as: :file%>
+        <% end %>
+      </div>
+
     </div>
+
     <%= f.submit "Submit", class: "btn btn-primary", data: { disable_with: "Submitting..." } %>
   <% end %>
 </div>
