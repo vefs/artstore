@@ -5,12 +5,12 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-u0 = User.new(email: "weichen.vefs@gmail.com", password: "12345678", password_confirmation: "12345678")
-u0.save
+#u0 = User.new(email: "weichen.vefs@gmail.com", password: "12345678", password_confirmation: "12345678")
+#u0.save
 
-u = User.new
-u.email = "admin@test.com"           # 可以改成自己的 email
-u.password = "12345678"              # 最少要八碼
-u.password_confirmation = "12345678" # 最少要八碼
-u.is_admin = true
-u.save
+#u = User.new
+#u.email = "admin@test2.com"           # 可以改成自己的 email
+#u.password = "12345678"              # 最少要八碼
+#u.password_confirmation = "12345678" # 最少要八碼
+#u.is_admin = true
+#u.save
